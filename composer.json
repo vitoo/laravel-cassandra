@@ -1,8 +1,8 @@
 {
-  "name": "websmurf/laravel-cassandra",
+  "name": "vitoo/laravel-cassandra",
   "description": "Cassandra wrapper for Laravel/Lumen",
   "keywords": ["cassandra"],
-  "homepage": "https://github.com/websmurf/laravel-cassandra",
+  "homepage": "https://github.com/vitoo/laravel-cassandra",
   "license": "MIT",
   "authors": [
     {
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Websmurf\\LaravelCassandra\\": "src"
+      "Vitoo\\LaravelCassandra\\": "src"
     }
   },
   "autoload-dev": {
