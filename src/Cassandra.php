@@ -1,6 +1,6 @@
 <?php
 
-namespace Websmurf\LaravelCassandra;
+namespace Vitoo\LaravelCassandra;
 
 class Cassandra
 {
@@ -15,7 +15,7 @@ class Cassandra
     /**
      * Create a new connection instance with the provided configuration
      */
-    public function __construct($env = 'default') {
+    public function __construct($env = 'default')
     {
         // Set up connection details
         $builder = \Cassandra::cluster();
@@ -37,7 +37,7 @@ class Cassandra
         if ( ! empty( $defaultConsistency )) {
             $builder->withDefaultConsistency($defaultConsistency);
         }
-        
+
         // Fetch configured default credentials and set it, if it's provided
         $username = config('cassandra.username');
         $password = config('cassandra.password');
@@ -45,7 +45,7 @@ class Cassandra
             $builder->withCredentials($username, $password);
         }
 
-        // Set contact end points
+         // Set contact end points
         call_user_func_array([ $builder, "withContactPoints"], config('cassandra.contactpoints.' . $env));
 
         // Connect to cluster

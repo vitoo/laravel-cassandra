@@ -1,6 +1,6 @@
 <?php
 
-namespace Websmurf\LaravelCassandra;
+namespace Vitoo\LaravelCassandra;
 
 use Illuminate\Support\ServiceProvider;
 
