@@ -4,11 +4,11 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Cassandra contact point ip(s)
+    | Cassandra contact point ip(s) with multi environment
     |--------------------------------------------------------------------------
     */
     'contactpoints'      => [
-        '127.0.0.1'
+        'default' => ['127.0.0.1'],
     ],
 
     /* cassandra port number */
@@ -21,5 +21,11 @@ return [
     'defaultConsistency' => \Cassandra::CONSISTENCY_ALL,
 
     /* default connection keyspace */
-    'keyspace'           => 'general'
+    'keyspace'           => 'general',
+    
+     /* default connection username */
+    'username' => 'cassandra',
+    
+     /* default connection password */
+    'password' => 'cassandra',
 ];
